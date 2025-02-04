@@ -1,16 +1,14 @@
-#pragma once
+#pragma once  
 #include <string>
 #include "wallet.h"
-using namespace std;
+
 
 class User
 {
-public:
-
 private:
-	Wallet _UserWallet;
-	string _login;
-	string _password;
-	string _FIO;
-	tm _UserDate{};  
+	Wallet _Wallet;
+	std::string _login;
+	std::string _password;
+	std::string _FIO;
+	std::tm _BirthDate{};
 };
