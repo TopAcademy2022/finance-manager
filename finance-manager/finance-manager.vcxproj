@@ -127,7 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="card-operation.cpp" />
+    <ClCompile Include="card.cpp" />
+    <ClCompile Include="cost.cpp" />
+    <ClCompile Include="deposit.cpp" />
     <ClCompile Include="finance-manager.cpp" />
+    <ClCompile Include="history-operation.cpp" />
+    <ClCompile Include="report.cpp" />
+    <ClCompile Include="user.cpp" />
+    <ClCompile Include="wallet.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="card-operation.h" />
+    <ClInclude Include="card.h" />
+    <ClInclude Include="cost.h" />
+    <ClInclude Include="deposit.h" />
+    <ClInclude Include="history-operation.h" />
+    <ClInclude Include="report.h" />
+    <ClInclude Include="user.h" />
+    <ClInclude Include="wallet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
