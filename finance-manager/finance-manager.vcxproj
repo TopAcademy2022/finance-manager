@@ -133,6 +133,7 @@
     <ClCompile Include="deposit.cpp" />
     <ClCompile Include="finance-manager.cpp" />
     <ClCompile Include="history-operation.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="report.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="wallet.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="cost.h" />
     <ClInclude Include="deposit.h" />
     <ClInclude Include="history-operation.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="report.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="wallet.h" />

@@ -12,4 +12,7 @@ private:
 	std::string _password;
 	std::string _fio;
 	std::tm _birthDate{};
+
+public:
+	static bool Login(std::string login, std::string password);
 };
