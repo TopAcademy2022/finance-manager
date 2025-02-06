@@ -2,6 +2,7 @@
 
 
 #include <iostream>
+#include <time.h>
 #include "user.h"
 #include "card-operation.h"
 

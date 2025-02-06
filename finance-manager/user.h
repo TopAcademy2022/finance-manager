@@ -2,6 +2,7 @@
 
 
 #include <string>
+#include <time.h>
 #include "wallet.h"
 
 class User
@@ -11,5 +12,8 @@ private:
 	std::string _login;
 	std::string _password;
 	std::string _fio;
-	std::tm _birthDate{};
+	tm _birthDate{};
+
+public:
+	static bool Login(std::string login, std::string password);
 };

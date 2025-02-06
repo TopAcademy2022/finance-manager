@@ -5,6 +5,15 @@ project(finance-manager VERSION 0.0.1 LANGUAGES CXX)
 set(
     CORE
         finance-manager/finance-manager.cpp
+
+        finance-manager/wallet.h
+        finance-manager/wallet.cpp
+
+        finance-manager/user.h
+        finance-manager/user.cpp
+
+        finance-manager/menu.h
+        finance-manager/menu.cpp
 )
 
 add_executable(FinanceManager ${CORE})
