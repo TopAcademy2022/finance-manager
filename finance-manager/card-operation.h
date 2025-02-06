@@ -3,4 +3,6 @@
 
 class CardOperation
 {
+private:
+	double _sum;
 };
