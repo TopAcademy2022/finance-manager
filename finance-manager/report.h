@@ -1,10 +1,10 @@
 #pragma once
 
 
-#include <fstream>
+#include <string>
 
 class Report
 {
 private:
-	std::fstream _pathToFile;
+	std::string _pathToFile;
 };
