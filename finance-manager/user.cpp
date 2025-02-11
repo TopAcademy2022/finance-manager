@@ -35,3 +35,8 @@ bool User::Registration(std::string login, std::string password, std::string fio
 	
 
 }
+
+bool User::Login(std::string login, std::string password)
+{
+	return false;
+}
