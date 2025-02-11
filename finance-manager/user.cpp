@@ -18,21 +18,15 @@ bool User::Registration(std::string login, std::string password, std::string fio
 	if (file.is_open()) {
 		try {
 			std::string text = login + " " + password + " " + fio + " " + std::to_string(birthdate.tm_wday) + "." + std::to_string(birthdate.tm_mon) + "." + std::to_string(birthdate.tm_year) + "\n";
-
 			file.write(text.c_str(), text.size());
 			file.close();
-			std::cout << "Succes.";
 			return true;
 		}
 		catch (std::exception ex) {
 			return false;
 		}
 	}
-	else {
-		std::cout << "File cant be open." << std::endl;
-		return false;
-	}
-	
+	return false;
 
 }
 
