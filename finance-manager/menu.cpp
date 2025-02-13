@@ -17,7 +17,6 @@ void Menu::PrintLogin()
 
 	int userChoice = 0;
 	std::cin >> userChoice;
-
 	std::string login = "";
 	std::string password = "";
 
