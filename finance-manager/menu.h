@@ -2,6 +2,7 @@
 
 
 #include <iostream>
+#include <type_traits>
 #include "user.h"
 
 class Menu
@@ -9,9 +10,10 @@ class Menu
 private:
 	User _user;
 
-	void Print();
+//	void Print();
 public:
-	Menu();
+
+	void Print();
 
 	void PrintLogin();
 };

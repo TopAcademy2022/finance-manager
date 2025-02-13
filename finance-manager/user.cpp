@@ -8,7 +8,7 @@
 //		thing = std::to_string(this->_birthDate.tm_wday)  + "."+std::to_string(this->_birthDate.tm_mon)+"." + std::to_string(this->_birthDate.tm_year);
 //	}
 //	return thing;
-//}
+//}                          
 
 bool User::Registration(std::string login, std::string password, std::string fio, tm birthdate)
 {
@@ -24,7 +24,7 @@ bool User::Registration(std::string login, std::string password, std::string fio
 		}
 		catch (std::exception ex) {
 			return false;
-		}
+		} 
 	}
 	return false;
 
