@@ -13,6 +13,9 @@ private:
 	int _cvv;
 	std::string _number;
 	std::string _userName;
-public: 
-	bool Rebalance(int sumMinus);
+
+public:
+	bool TopUp(int sum);
+  
+  bool Rebalance(int sumMinus);
 };

@@ -1,8 +1,10 @@
 #pragma once
 
 
-#include "card-operation.h"
+#include <string>
 
-class Deposit : public CardOperation
+class Deposit
 {
+private:
+	std::string _fio;
 };
