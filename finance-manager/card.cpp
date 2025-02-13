@@ -1,7 +1,7 @@
 #include "card.h"
 bool Card::Rebalance(int sumMinus)
 {
-	if (sumMinus < this->_balance) {
+	if (sumMinus < 0) {
 		this->_balance -= sumMinus;
 		return true;
 	}
