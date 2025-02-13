@@ -14,6 +14,7 @@ private:
 	std::string _password;
 	std::string _fio;
 	tm _birthDate{};
+	static std::list<User> UserData();
 	//std::string tm_to_date(std::string format);
 	
 public:
