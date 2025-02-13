@@ -1,13 +1,16 @@
 #pragma once
 
 
-
-#include <list>
 #include "card.h"
+#include <list>
+
+
 
 class Wallet
 {
 private:
 	std::list<Card> _cardList;
 	int _balance;
+public:
+	void AddCard(Card card);
 };
