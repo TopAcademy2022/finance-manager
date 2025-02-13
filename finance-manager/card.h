@@ -13,4 +13,6 @@ private:
 	int _cvv;
 	std::string _number;
 	std::string _userName;
+public: 
+	bool Rebalance(int sumMinus);
 };
