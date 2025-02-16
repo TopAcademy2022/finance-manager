@@ -15,4 +15,10 @@ private:
 	std::string _userName;
 public:
 	bool TopUp(int sum);
+	std::string GetUserName() {
+		return _userName;
+	}
+	int GetBalance(){
+		return _balance;
+	}
 };
