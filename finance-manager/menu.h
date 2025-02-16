@@ -10,10 +10,7 @@ class Menu
 private:
 	User _user;
 
-//	void Print();
-public:
-
 	void Print();
-
+public:
 	void PrintLogin();
 };
