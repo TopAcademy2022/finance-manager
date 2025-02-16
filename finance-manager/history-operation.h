@@ -1,14 +1,11 @@
 #pragma once
 
 
-#include <iostream>
-#include <time.h>
-#include "user.h"
-#include "card-operation.h"
+#include <list>
+#include "history.h"
+
 
 class HistoryOperation {
 private:
-	User _user;
-	CardOperation _operation;
-	tm data{};
+	std::list<History> _history;
 };
