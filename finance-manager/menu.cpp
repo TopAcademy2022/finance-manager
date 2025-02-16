@@ -25,12 +25,18 @@ void Menu::Print()
 
     do {
         std::cout << "Введите номер пункта меню: ";
-        if (!(std::cin >> UserChoice)) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin >> UserChoice;
+
+        
+        if (std::cin.fail()) {
+            std::cin.clear(); 
+            std::cin.get(); 
             std::cout << "Неверный ввод, попробуйте снова." << std::endl;
         }
-    } while (UserChoice < 1 || UserChoice > 9);
+        else if (UserChoice < 1 || UserChoice > 9) {
+            std::cout << "Выберите номер пункта от 1 до 9." << std::endl;
+        }
+    } while (std::cin.fail() || UserChoice < 1 || UserChoice > 9);
 
     switch (UserChoice) {
     case 1:
