@@ -1,7 +1,7 @@
 #pragma once
 
 
-enum class Categories {
+enum Categories {
 	Beauty = 0,
 	Fast_Food = 1,
 	Clothes_And_Shoes = 2,
