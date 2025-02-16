@@ -6,7 +6,8 @@ bool Card::Rebalance(int sumMinus)
 		this->_balance -= sumMinus;
 		return true;
 	}
-	return false; 
+	return false;
+}
 
 bool Card::TopUp(int sum)
 {
