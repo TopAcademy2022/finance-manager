@@ -17,5 +17,13 @@ private:
 public:
 	bool TopUp(int sum);
   
+	std::string GetUserName() {
+		return _userName;
+	}
+  
+	int GetBalance(){
+		return _balance;
+	}
+  
   bool Rebalance(int sumMinus);
 };
