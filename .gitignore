@@ -413,6 +413,9 @@ CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
 
+# T
+finance-manager.vcxproj.*
+
 # Build folder
 build/*
 

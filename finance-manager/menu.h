@@ -2,6 +2,7 @@
 
 
 #include <iostream>
+#include <type_traits>
 #include "user.h"
 
 class Menu
@@ -11,7 +12,6 @@ private:
 
 	void Print();
 public:
-	Menu();
-
 	void PrintLogin();
+
 };
