@@ -34,7 +34,6 @@ private:
     int _balance;
 
 public:
-	void AddCard(Card card);
 	void PrintCards();
   
     /*!
