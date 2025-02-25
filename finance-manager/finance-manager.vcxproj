@@ -132,6 +132,7 @@
     <ClCompile Include="cost.cpp" />
     <ClCompile Include="deposit.cpp" />
     <ClCompile Include="finance-manager.cpp" />
+    <ClCompile Include="helper.cpp" />
     <ClCompile Include="history-operation.cpp" />
     <ClCompile Include="history.cpp" />
     <ClCompile Include="menu.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="card.h" />
     <ClInclude Include="cost.h" />
     <ClInclude Include="deposit.h" />
+    <ClInclude Include="helper.h" />
     <ClInclude Include="history-operation.h" />
     <ClInclude Include="history-period.h" />
     <ClInclude Include="history.h" />
