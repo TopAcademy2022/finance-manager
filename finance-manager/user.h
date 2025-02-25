@@ -2,9 +2,10 @@
 
 
 #include <string>
-#include <time.h>
+#include <ctime>
+#include <fstream>
 #include "wallet.h"
-#include "fstream"
+#include "helper.h"
 
 class User
 {
@@ -20,4 +21,5 @@ private:
 public:
 	static bool Registration(std::string login, std::string password,std::string fio,tm birthdate);
 	static bool Login(std::string login, std::string password);
+	bool operator==(User second);
 };

@@ -69,3 +69,16 @@ bool User::Login(std::string login, std::string password)
 
 	return isCorrect;
 }
+
+bool User::operator==(User second)
+{
+	if (this->_login == second._login &&
+		this->_password == second._password &&
+		this->_fio == second._fio &&
+		helper_tm::Helper::CompareData(this->_birthDate, second._birthDate));
+	{
+		return true;
+	}
+
+	return false;
+}
