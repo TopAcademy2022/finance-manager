@@ -14,6 +14,9 @@ set(
 
         finance-manager/menu.h
         finance-manager/menu.cpp
+
+	finance-manager/helper.h
+	finance-manager/helper.cpp
 )
 
 add_executable(FinanceManager ${CORE})
