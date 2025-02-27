@@ -22,10 +22,6 @@ set(
 # Set DEFAULT install (README.md points to this line)
 set (FIRST_BOOST_INSTALL OFF)
 
-        finance-manager/menu.cpp
-
-	finance-manager/helper.h
-	finance-manager/helper.cpp
 if(FIRST_BOOST_INSTALL)
 	# Include default library/boost_1_80_0
 	include(./library/CMakeLists.txt)
@@ -56,12 +52,12 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} PRIVATE Boost::date_time)
 
 target_include_directories(${PROJECT_NAME}
-target_include_directories(FinanceManager
     PRIVATE
     finance-manager/
 )
 
 set_target_properties(
+    ${PROJECT_NAME} PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
