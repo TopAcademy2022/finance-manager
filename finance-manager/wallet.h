@@ -41,5 +41,6 @@ public:
      * @param card Карта, которую нужно добавить.
      */
     void AddCard(Card card);
-};
 
+    std::list<Card> GetCardList();
+};
