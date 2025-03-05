@@ -94,7 +94,7 @@ void Menu::PrintLogin()
 
 		if (User::Login(login, password))
 		{
-			system("cls");
+			//system("cls");
 			this->Print();
 		}
 		break;
