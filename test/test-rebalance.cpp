@@ -2,7 +2,7 @@
 
 
 #include <boost/test/unit_test.hpp>
-#include "..\finance-manager\card.h"
+#include "../finance-manager/card.h"
 
 BOOST_AUTO_TEST_CASE(testRebalance)
 {
