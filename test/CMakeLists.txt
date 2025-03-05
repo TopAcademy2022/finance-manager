@@ -17,7 +17,7 @@ find_package(Boost 1.80.0 COMPONENTS date_time unit_test_framework REQUIRED)
 add_executable(${NAME_TEST_REBALANCE} ${TEST_REBALANCE})
 
 target_include_directories(${NAME_TEST_REBALANCE} PRIVATE ${Boost_INCLUDE_DIRS})
-target_link_libraries(${NAME_TEST_REBALANCE} PRIVATE Boost::unit_test_framework)
+target_link_libraries(${NAME_TEST_REBALANCE} PRIVATE Boost::date_time Boost::unit_test_framework)
 
 set_target_properties(
     ${NAME_TEST_REBALANCE} PROPERTIES
