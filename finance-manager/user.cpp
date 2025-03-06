@@ -79,7 +79,7 @@ bool User::operator==(User second)
 	if (this->_login == second._login &&
 		this->_password == second._password &&
 		this->_fio == second._fio &&
-		helper_tm::Helper::CompareData(this->_birthDate, second._birthDate))
+		helper::Helper::CompareData(this->_birthDate, second._birthDate))
 	{
 		return true;
 	}
@@ -95,4 +95,9 @@ Wallet User::GetWallet()
 void User::CreateWallet()
 {
 	this->_wallet = Wallet();
+}
+
+HistoryOperation User::GetHistoryOperation()
+{
+	return this->_historyOperation;
 }

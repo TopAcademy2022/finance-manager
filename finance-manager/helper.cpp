@@ -1,6 +1,6 @@
 #include "helper.h"
 
-bool helper_tm::Helper::CompareData(tm first, tm second)
+bool helper::Helper::CompareData(tm first, tm second)
 {
 	if (first.tm_year == second.tm_year &&
 		first.tm_mon == second.tm_mon &&
@@ -10,4 +10,9 @@ bool helper_tm::Helper::CompareData(tm first, tm second)
 	}
 
 	return false;
+}
+
+std::string helper::Helper::ConvertToString(Categories category)
+{
+	return std::string();
 }
