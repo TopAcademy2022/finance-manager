@@ -82,3 +82,8 @@ bool User::operator==(User second)
 
 	return false;
 }
+
+Wallet User::GetWallet()
+{
+	return this->_wallet;
+}
