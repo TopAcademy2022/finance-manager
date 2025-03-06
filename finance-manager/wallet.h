@@ -2,11 +2,7 @@
 
 /*!
  * @file Wallet.h
- * @brief Объявление класса Wallet, представляющего кошелек с картами и балансом.
- *
- * Этот файл содержит объявление класса `Wallet`, который используется для хранения
- * списка карт (`Card`) и текущего баланса пользователя.  Класс предоставляет методы
- * для добавления карт в кошелек.
+ * @brief Wallet with cards
  */
 
 #include "card.h"
@@ -14,22 +10,18 @@
 
  /*!
   * @class Wallet
-  * @brief Представляет кошелек, содержащий список карт и баланс.
-  *
-  * Класс `Wallet` используется для моделирования кошелька пользователя.
-  * Он содержит список карт, представленных классом `Card`, и текущий
-  * баланс.  В настоящее время реализован только метод добавления карт.
+  * @brief Wallet with cards and balance.
   */
 class Wallet
 {
 private:
     /*!
-     * @brief Список карт в кошельке.
+     * @brief Card list.
      */
     std::list<Card> _cardList;
 
     /*!
-     * @brief Текущий баланс в кошельке.
+     * @brief Current balance.
      */
     int _balance;
 
@@ -37,8 +29,8 @@ public:
 	void PrintCards();
   
     /*!
-     * @brief Добавляет карту в кошелек.
-     * @param card Карта, которую нужно добавить.
+     * @brief Add card to wallet.
+     * @param[in] card - Card, was added to wallet.
      */
     void AddCard(Card card);
 
