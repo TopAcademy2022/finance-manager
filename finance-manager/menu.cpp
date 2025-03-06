@@ -74,9 +74,9 @@ void Menu::Print()
 
 void Menu::PrintLogin()
 {
-	std::cout << "1. Войти" << std::endl;
-	std::cout << "2. Регистрация" << std::endl;
-	std::cout << "3. Выход" << std::endl;
+	std::cout << "1. Sign in" << std::endl;
+	std::cout << "2. Registration" << std::endl;
+	std::cout << "3. Exit" << std::endl;
 
 	int userChoice = 0;
 	std::cin >> userChoice;
@@ -86,10 +86,10 @@ void Menu::PrintLogin()
 	switch (userChoice)
 	{
 	case 1:
-		std::cout << "Введите логин: ";
+		std::cout << "Enter login: ";
 		std::cin >> login;
 
-		std::cout << "Введите пароль: ";
+		std::cout << "Enter password: ";
 		std::cin >> password;
 
 		if (User::Login(login, password))
