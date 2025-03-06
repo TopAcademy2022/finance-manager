@@ -6,6 +6,7 @@
 #include <fstream>
 #include "wallet.h"
 #include "helper.h"
+#include "history-operation.h"
 
 class User
 {
@@ -17,6 +18,7 @@ private:
 	tm _birthDate{};
 	static std::list<User> UserData();
 	//std::string tm_to_date(std::string format);
+	HistoryOperation _historyOperation;
 	
 public:
 	static bool Registration(std::string login, std::string password,std::string fio,tm birthdate);
@@ -28,4 +30,6 @@ public:
 	Wallet GetWallet();
 
 	void CreateWallet();
+
+	HistoryOperation GetHistoryOperation();
 };

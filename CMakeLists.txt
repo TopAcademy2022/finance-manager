@@ -15,8 +15,33 @@ set(
         finance-manager/menu.h
         finance-manager/menu.cpp
 
-	finance-manager/helper.h
-	finance-manager/helper.cpp
+        finance-manager/helper.h
+        finance-manager/helper.cpp
+
+        finance-manager/card.h
+        finance-manager/card.cpp
+
+        finance-manager/card-operation.h
+        finance-manager/card-operation.cpp
+
+        finance-manager/categories.h
+
+        finance-manager/cost.h
+        finance-manager/cost.cpp
+
+        finance-manager/deposit.h
+        finance-manager/deposit.cpp
+
+        finance-manager/history.h
+        finance-manager/history.cpp
+
+        finance-manager/history-operation.h
+        finance-manager/history-operation.cpp
+
+        finance-manager/history-period.h
+
+        finance-manager/report.h
+        finance-manager/report.cpp
 )
 
 add_executable(FinanceManager ${CORE})
