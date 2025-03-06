@@ -62,9 +62,13 @@ bool User::Login(std::string login, std::string password)
 	bool isCorrect = false;
 	std::list<User> users = UserData();
 
-	for (User logins : users) {
-		if (logins._login== user._login && logins._password == user._password)
+	for (User logins : users)
+	{
+		if (logins._login == user._login && logins._password == user._password)
+		{
 			isCorrect = true;
+			break;
+		}
 	}
 
 	return isCorrect;
@@ -75,7 +79,7 @@ bool User::operator==(User second)
 	if (this->_login == second._login &&
 		this->_password == second._password &&
 		this->_fio == second._fio &&
-		helper_tm::Helper::CompareData(this->_birthDate, second._birthDate));
+		helper_tm::Helper::CompareData(this->_birthDate, second._birthDate))
 	{
 		return true;
 	}
@@ -86,4 +90,9 @@ bool User::operator==(User second)
 Wallet User::GetWallet()
 {
 	return this->_wallet;
+}
+
+void User::CreateWallet()
+{
+	this->_wallet = Wallet();
 }

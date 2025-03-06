@@ -26,4 +26,6 @@ public:
 	bool operator==(User second);
 
 	Wallet GetWallet();
+
+	void CreateWallet();
 };

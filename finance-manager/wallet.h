@@ -26,6 +26,8 @@ private:
     int _balance;
 
 public:
+    Wallet();
+
 	void PrintCards();
   
     /*!
