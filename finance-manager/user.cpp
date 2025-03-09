@@ -1,37 +1,49 @@
 #include "user.h"
 
-//std::string User::tm_to_date(std::string format)
-//{
-//	std::string thing;
-//	if(format == "dd-mm-yyyy")
-//	{
-//		thing = std::to_string(this->_birthDate.tm_wday)  + "."+std::to_string(this->_birthDate.tm_mon)+"." + std::to_string(this->_birthDate.tm_year);
-//	}
-//	return thing;
-//}
+std::list<User> User::GetUserList()
+{
+	std::list<User> result = std::list<User>();
 
-std::list<User> User::UserData() {
-	std::ifstream file;
-	file.open("./Users.txt", std::ios::app);
-	std::list<User> users;
-	if (file.is_open()) {
-		std::string line;
-		while (getline(file, line)) {
-			User user;
-			user._login = line.substr(0, line.find(' '));
-			line.erase(0, line.find(' ') + 1);
-			user._password = line.substr(0, line.find(' '));
-			line.erase(0, line.find(' ') + 1); 
-			user._fio = line.substr(0, line.find(' '));
-			line.erase(0, line.find(' ') + 1);
-			user._birthDate.tm_wday = stoi((line.substr(0, line.find(' '))).substr(0, 2));
-			user._birthDate.tm_mon = stoi((line.substr(0, line.find(' '))).substr(3, 5));
-			user._birthDate.tm_year = stoi((line.substr(0, line.find(' '))).substr(6, 10));
-			users.push_back(user);
+	try
+	{
+		std::ifstream file = std::ifstream("./Users.txt");
+
+		if (file.is_open())
+		{
+			std::string line;
+			while (getline(file, line))
+			{
+				std::list<std::string> params = helper::Helper::SplitString(line, " ");
+				auto paramsIter = params.begin();
+				
+				User user = User("Example");
+				user._login = *(paramsIter++);
+				user._password = *(paramsIter++);
+				user._fio = *(paramsIter++);
+
+				std::string birthDate = *paramsIter;
+				// TODO: Convert birthDate here
+				user._birthDate.tm_wday = 0;
+				user._birthDate.tm_mon = 0;
+				user._birthDate.tm_year = 0;
+				
+				result.push_back(user);
+			}
+
+			file.close();
 		}
-		file.close();
 	}
-	return users;
+	catch(std::exception ex)
+	{
+		std::cout << "Error: " << ex.what() << std::endl;
+	}
+	
+	return result;
+}
+
+User::User(std::string walletName)
+{
+	this->_wallet = new Wallet(walletName);
 }
 
 bool User::Registration(std::string login, std::string password, std::string fio, tm birthdate)
@@ -46,21 +58,22 @@ bool User::Registration(std::string login, std::string password, std::string fio
 			file.close();
 			return true;
 		}
-		catch (std::exception ex) {
-			return false;
+		catch (std::exception ex)
+		{
+			std::cout << "Error: " << ex.what() << std::endl;
 		}
 	}
-	return false;
 
+	return false;
 }
 
 bool User::Login(std::string login, std::string password)
 {
-	User user;
+	User user = User("Example");
 	user._login = login;
 	user._password = password;
 	bool isCorrect = false;
-	std::list<User> users = UserData();
+	std::list<User> users = GetUserList();
 
 	for (User logins : users)
 	{
@@ -87,14 +100,14 @@ bool User::operator==(User second)
 	return false;
 }
 
-Wallet User::GetWallet()
+Wallet* User::GetWallet()
 {
 	return this->_wallet;
 }
 
-void User::CreateWallet()
+void User::CreateWallet(std::string walletName)
 {
-	this->_wallet = Wallet();
+	this->_wallet = new Wallet(walletName);
 }
 
 HistoryOperation User::GetHistoryOperation()

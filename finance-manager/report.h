@@ -7,12 +7,12 @@
 class Report
 {
 private:
-	User _user;
+	User* _user;
 
 	std::string _pathToFileTopCategories;
 
 public:
-	Report();
+	Report(User* user);
 
 	void SaveTopCategories(HistoryPeriod period, std::string username);
 };
