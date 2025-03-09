@@ -22,13 +22,11 @@ public:
 	*/
 	bool TopUp(int sum);
   
-	std::string GetUserName() {
-		return _userName;
-	}
+	std::string GetUserName();
   
-	int GetBalance(){
-		return _balance;
-	}
+	int GetBalance();
   
-  bool Rebalance(int sumMinus);
+	bool Rebalance(int sumMinus);
+
+	void Print();
 };

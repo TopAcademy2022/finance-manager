@@ -1,23 +1,57 @@
 #include "wallet.h"
 
-void Wallet::AddCard(Card card)
+void Wallet::AddCard(Card* card)
 {
-	_cardList.push_back(card);
+	this->_cardList.push_back(card);
 }
 
-std::list<Card> Wallet::GetCardList()
+bool Wallet::TopUpCard(unsigned int cardNumber, unsigned int sum)
+{
+    unsigned int i = 1;
+    for (Card* card : this->GetCardList())
+    {
+        if (cardNumber == i)
+        {
+            card->TopUp((int)sum);
+            return true;
+        }
+
+        i++;
+    }
+
+    return false;
+}
+
+std::list<Card*> Wallet::GetCardList()
 {
     return this->_cardList;
 }
 
-Wallet::Wallet()
+std::string Wallet::GetName()
 {
-    this->_balance = 0;
-    this->_cardList = std::list<Card>();
+    return this->_name;
 }
 
-void Wallet::PrintCards() {
-    for (Card r : _cardList) {
-        std::cout << r.GetUserName() << r.GetBalance() << std::endl; 
+Wallet::Wallet(std::string name)
+{
+    this->_balance = 0;
+    this->_cardList = std::list<Card*>();
+    this->_name = name;
+}
+
+void Wallet::Print()
+{
+    if (this->_name.size() > 0)
+    {
+        std::cout << "\t-- - " << this->_name << " -- - " << std::endl;
+
+        for (Card* card : this->GetCardList())
+        {
+            card->Print();
+        }
+    }
+    else
+    {
+        std::cout << "Wallets not found!" << std::endl;
     }
 }
