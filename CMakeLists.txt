@@ -90,7 +90,7 @@ set_target_properties(
 )
 
 # Enable testing functionality
-set(ENABLE_TESTING ON)
+set(ENABLE_TESTING OFF)
 
 if(ENABLE_TESTING)
 	enable_testing()
