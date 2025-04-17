@@ -9,25 +9,14 @@ set(
 
 set(
     CORE
-		finance-manager/menu.h
-		finance-manager/menu.cpp
-		finance-manager/user.h
-		finance-manager/user.cpp
-		finance-manager/wallet.h
-		finance-manager/wallet.cpp
-		finance-manager/card.h
-		finance-manager/card.cpp
-)
+        finance-manager/wallet.h
+        finance-manager/wallet.cpp
 
-# Set DEFAULT install (README.md points to this line)
-set (FIRST_BOOST_INSTALL ON)
+        finance-manager/user.h
+        finance-manager/user.cpp
 
-if(FIRST_BOOST_INSTALL)
-	# Include default library/boost_1_80_0
-	include(./library/CMakeLists.txt)
-endif()
-# Only find static libs
-set(Boost_USE_STATIC_LIBS ON)
+        finance-manager/menu.h
+        finance-manager/menu.cpp
 
         finance-manager/helper.h
         finance-manager/helper.cpp
@@ -57,6 +46,16 @@ set(Boost_USE_STATIC_LIBS ON)
         finance-manager/report.h
         finance-manager/report.cpp
 )
+
+# Set DEFAULT install (README.md points to this line)
+set (FIRST_BOOST_INSTALL ON)
+
+if(FIRST_BOOST_INSTALL)
+	# Include default library/boost_1_80_0
+	include(./library/CMakeLists.txt)
+endif()
+# Only find static libs
+set(Boost_USE_STATIC_LIBS ON)
 
 # Ignore debug libs and
 set(Boost_USE_DEBUG_LIBS OFF)
