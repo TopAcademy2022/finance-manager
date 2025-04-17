@@ -29,6 +29,34 @@ endif()
 # Only find static libs
 set(Boost_USE_STATIC_LIBS ON)
 
+        finance-manager/helper.h
+        finance-manager/helper.cpp
+
+        finance-manager/card.h
+        finance-manager/card.cpp
+
+        finance-manager/card-operation.h
+        finance-manager/card-operation.cpp
+
+        finance-manager/categories.h
+
+        finance-manager/cost.h
+        finance-manager/cost.cpp
+
+        finance-manager/deposit.h
+        finance-manager/deposit.cpp
+
+        finance-manager/history.h
+        finance-manager/history.cpp
+
+        finance-manager/history-operation.h
+        finance-manager/history-operation.cpp
+
+        finance-manager/history-period.h
+
+        finance-manager/report.h
+        finance-manager/report.cpp
+)
 
 # Ignore debug libs and
 set(Boost_USE_DEBUG_LIBS OFF)

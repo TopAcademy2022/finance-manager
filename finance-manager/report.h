@@ -2,9 +2,17 @@
 
 
 #include <string>
+#include "user.h"
 
 class Report
 {
 private:
-	std::string _pathToFile;
+	User* _user;
+
+	std::string _pathToFileTopCategories;
+
+public:
+	Report(User* user);
+
+	void SaveTopCategories(HistoryPeriod period, std::string username);
 };

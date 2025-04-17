@@ -421,15 +421,16 @@ finance-manager.vcxproj.*
 # Doxygen out dir
 docs/html/*
 
+# File with test users
+/finance-manager/Users.txt
+
 # Boost folder
 library/boost_1_80_0/*<<<<<<< .mine
 build/*
 
 # Boost folder
 library/boost_1_80_0/*
-=======
-build/*
 
-# Doxygen out dir
-docs/html/*
+
+
 >>>>>>> .theirs
