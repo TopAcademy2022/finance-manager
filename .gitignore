@@ -417,10 +417,16 @@ CMakeUserPresets.json
 finance-manager.vcxproj.*
 
 # Build folder
-build/*
 
 # Doxygen out dir
 docs/html/*
 
 # File with test users
 /finance-manager/Users.txt
+
+# Boost folder
+library/boost_1_80_0/*<<<<<<< .mine
+build/*
+
+# Boost folder
+library/boost_1_80_0/*
