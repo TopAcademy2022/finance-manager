@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 project(finance-manager VERSION 0.0.1 LANGUAGES CXX)
 
@@ -40,8 +40,10 @@ set(
 
         finance-manager/history-period.h
 
-        finance-manager/report.h
-        finance-manager/report.cpp
+        finance-manager/models/report.h
+
+        finance-manager/services/report-service.h
+        finance-manager/services/report-service.cpp
 )
 
 add_executable(FinanceManager ${CORE})
@@ -49,6 +51,8 @@ add_executable(FinanceManager ${CORE})
 target_include_directories(FinanceManager
     PRIVATE
     finance-manager/
+    finance-manager/models/
+    finance-manager/services/
 )
 
 set_target_properties(

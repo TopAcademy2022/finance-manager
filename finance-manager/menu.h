@@ -4,7 +4,7 @@
 #include <iostream>
 #include <type_traits>
 #include "user.h"
-#include "report.h"
+#include "./models/report.h"
 
 /*!
 * @class Menu representing the application menu

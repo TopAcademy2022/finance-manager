@@ -1,5 +1,6 @@
 #include "menu.h"
-
+#include "models/report.h"
+#include "services/report-service.h"
 bool Menu::Print()
 {
 	this->_user->GetWallet()->Print();
@@ -10,7 +11,7 @@ bool Menu::Print()
 		"Add wallet",
 		"Add new card",
 		"Top up balance",
-		"4)Уменьшить балланс",
+		"4)Уменьшить баланс",
 		"5)Сформировать отчёт",
 		"6)Сформировать рейтинг(топ 3)",
 		"7)Сохранить отчёт",
@@ -71,7 +72,7 @@ bool Menu::Print()
 	}
 	case 4:
 	{
-		std::cout << "Уменьшить балланс" << std::endl;
+		std::cout << "Уменьшить баланс" << std::endl;
 		std::list<Card*> cards = this->_user->GetWallet()->GetCardList();
 		// Get card name and find in list.
 		int sum = 500;
@@ -95,11 +96,12 @@ bool Menu::Print()
 	{
 		std::cout << "Сохранить рейтинг" << std::endl;
 		HistoryPeriod period = HistoryPeriod::Day; // get from user
-		this->_report->SaveTopCategories(period, "name"); // get from this->user
+		ReportServices report;
+		report.SaveTopCategories(period, "name"); // get from this->user
 		break;
 	}
 	case 9:
-		std::cout << "Goodbue!" << std::endl;
+		std::cout << "Goodbye!" << std::endl;
 		break;
 	default:
 		std::cout << "Unexpected error..." << std::endl;
