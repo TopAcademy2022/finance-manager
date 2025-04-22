@@ -1,14 +1,9 @@
-#include "report.h"
+#include "../services/report-service.h"
 
-Report::Report(User* user)
+void ReportServices::SaveTopCategories(HistoryPeriod period, std::string username)
 {
-	this->_user = user;
-	this->_pathToFileTopCategories = "./categories.top";
-}
-
-void Report::SaveTopCategories(HistoryPeriod period, std::string username)
-{
-	HistoryOperation historyOperation = this->_user->GetHistoryOperation();
+	User* user = new User("Wal");
+	HistoryOperation historyOperation = user->GetHistoryOperation();
 	std::list<Categories> top = historyOperation.GetTopCategories(period, username);
 
 	for (Categories category : top)
